@@ -7,7 +7,7 @@ const Header = () => (
     <img className="Header__logo" src={logo} alt="Logo" />
     <h1 className="Header__title">
       <span className="color--green">R</span>
-      <span className="color--grey">u</span>
+      <span className="color--white">u</span>
       <span className="color--blue">b</span>
       <span className="color--orange">i</span>
       <span className="color--yellow">k</span>
