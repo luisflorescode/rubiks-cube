@@ -1,0 +1,20 @@
+@import '../../App.scss';
+
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $grey-color;
+}
+
+.Header__logo {
+  height: 50px;
+}
+
+.Header__title {
+  margin-left: 15px;
+
+  span {
+    -webkit-text-stroke: .5px black;
+  }
+}

@@ -1,0 +1,43 @@
+@import './Vars.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $text-font;
+}
+
+h1,
+h3,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+}
+
+.color--blue {
+  color: $blue-color;
+}
+
+.color--green {
+  color: $green-color;
+}
+
+.color--grey {
+  color: $grey-color;
+}
+
+.color--orange {
+  color: $orange-color;
+}
+
+.color--red {
+  color: $red-color;
+}
+
+.color--yellow {
+  color: $yellow-color;
+}
