@@ -1,16 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addMove } from '../../redux/cubeDuck';
+import { addMove, isSolved } from '../../redux/cubeDuck';
 import './Move.scss';
 
 const Move = ({
-  move, image, moves, addMoveAction,
+  move, image, moves, addMoveAction, isSolvedAction,
 }) => {
   const applyMove = () => {
     const newMoves = moves;
     newMoves.push(move);
     addMoveAction(newMoves);
+    isSolvedAction(true);
   };
 
   return (
@@ -30,6 +31,10 @@ Move.propTypes = {
   image: PropTypes.string.isRequired,
   moves: PropTypes.instanceOf(Array).isRequired,
   addMoveAction: PropTypes.func.isRequired,
+  isSolvedAction: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, { addMoveAction: addMove })(Move);
+export default connect(mapStateToProps, {
+  addMoveAction: addMove,
+  isSolvedAction: isSolved,
+})(Move);
