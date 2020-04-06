@@ -26,6 +26,6 @@ export default function reducer(state = initialState, action) {
 export const addMove = (move) => (dispatch) => {
   dispatch({
     type: ADD_MOVE,
-    payload: move,
+    payload: [...move],
   });
 };
