@@ -4,7 +4,6 @@ const rubik = require('../utils/rubik');
 const initialState = {
   initialCube: rubik.randomCube(),
   moves: [],
-  numberMoves: 0,
 };
 
 // Actions
