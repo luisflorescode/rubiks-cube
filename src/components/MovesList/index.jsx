@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Move from '../Move';
 import './MovesList.scss';
 import R from '../../assets/static/images/R-min.png';
@@ -20,7 +22,7 @@ import Er from '../../assets/static/images/Er-min.png';
 import S from '../../assets/static/images/S-min.png';
 import Sr from '../../assets/static/images/Sr-min.png';
 
-const MovesList = () => {
+const MovesList = ({ isSolved }) => {
   const moves = [
     {
       move: 'R',
@@ -97,13 +99,29 @@ const MovesList = () => {
   ];
 
   return (
-    <section className="MovesList">
-      <h2 className="color--red">Apply Move</h2>
-      <div className="MovesList__content">
-        {moves.map((item) => <Move key={item.move} move={item.move} image={item.image} />)}
-      </div>
-    </section>
+    <>
+      {isSolved ? (
+        ''
+      ) : (
+        <section className="MovesList">
+          <h2 className="color--red">Apply Move</h2>
+          <div className="MovesList__content">
+            {moves.map((item) => (
+              <Move key={item.move} move={item.move} image={item.image} />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 
-export default MovesList;
+const mapStateToProps = (reducers) => ({
+  isSolved: reducers.cube.isSolved,
+});
+
+MovesList.propTypes = {
+  isSolved: PropTypes.bool.isRequired,
+};
+
+export default connect(mapStateToProps)(MovesList);
