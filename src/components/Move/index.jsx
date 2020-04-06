@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import './Move.scss';
 
 const Move = ({ move, image }) => (
-  <div className="Move">
+  <button className="Move" type="button">
     <img className="Move__img" src={image} alt="Move representation" />
-    <button className="Move__btn" type="button">{move}</button>
-  </div>
+    <figure className="Move__text">{move}</figure>
+  </button>
 );
 
 Move.propTypes = {

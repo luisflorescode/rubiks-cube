@@ -9,7 +9,7 @@ const MovesPanel = ({ moves }) => (
     <h3>
       Number of moves:
       {' '}
-      <span className="color--red">{moves.length}</span>
+      <span className="color--orange">{moves.length}</span>
     </h3>
     <h3>
       Moves history

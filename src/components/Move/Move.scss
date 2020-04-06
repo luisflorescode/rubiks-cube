@@ -1,6 +1,7 @@
 @import '../../assets/styles/Global.scss';
 
 .Move {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,23 +9,22 @@
   width: 90px;
   margin: 5px;
   padding: 5px;
+  background-color: $yellow-color;
   border: 1px solid $grey-color;
   border-radius: 5px;
+  outline-style: none;
+}
+
+.Move:active {
+  color: $grey-color;
+  background-color: $blue-color;
 }
 
 .Move__img {
   width: 80px;
 }
 
-.Move__btn {
-  cursor: pointer;
-  margin-top: 5px;
-  background-color: $yellow-color;
-  border: 1px solid black;
-  border-radius: 5px;
-  outline-style: none;
-}
-
-.Move__btn:active {
-  background-color: $green-color;
+.Move__text {
+  align-self: center;
+  margin: 5px 0 0;
 }
