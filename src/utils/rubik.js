@@ -22,7 +22,7 @@ const moves = [
 ];
 
 const randomCube = () => {
-  const cont = random(3, 6);
+  const cont = random(5, 25);
   const cubeMoves = [];
 
   for (let i = 0; i < cont; i += 1) {
