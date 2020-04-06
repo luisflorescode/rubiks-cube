@@ -1,5 +1,5 @@
 {
-  "name": "rubiks-cube",
+  "name": "rubiks-cube-game",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,8 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-devtools": "^3.5.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "rubiks-cube": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
