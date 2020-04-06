@@ -1,0 +1,16 @@
+@import '../../assets/styles/Global.scss';
+
+.MovementsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid $grey-color;
+  border-radius: 10px;
+}
+
+.MovementsList__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

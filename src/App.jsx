@@ -3,7 +3,7 @@ import Cube from './components/Cube';
 import Header from './components/Header';
 import Movements from './components/Movements';
 import './App.scss';
-import Movement from './components/Movement';
+import MovementsList from './components/MovementsList';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="App__content">
         <Cube />
         <Movements />
-        <Movement />
+        <MovementsList />
       </div>
     </div>
   );
