@@ -23,9 +23,9 @@ export default function reducer(state = initialState, action) {
 }
 
 // Action Creators
-export const addMove = (move) => (dispatch) => {
+export const addMove = (moves) => (dispatch) => {
   dispatch({
     type: ADD_MOVE,
-    payload: [...move],
+    payload: [...moves],
   });
 };
