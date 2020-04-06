@@ -4,12 +4,13 @@ const rubik = require('../utils/rubik');
 const initialState = {
   initialCube: rubik.randomCube(),
   moves: [],
-  isSolved: true,
+  isSolved: false,
 };
 
 // Actions
 const ADD_MOVE = 'ADD_MOVE';
 const IS_SOLVED = 'CHANGE_IS_SOLVED';
+const RESET_STATE = 'RESET_STATE';
 
 // Reducer
 export default function reducer(state = initialState, action) {
@@ -23,6 +24,12 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         isSolved: action.payload,
+      };
+    case RESET_STATE:
+      return {
+        initialCube: rubik.randomCube(),
+        moves: [],
+        isSolved: false,
       };
     default:
       return state;
@@ -40,5 +47,11 @@ export const isSolved = (solved) => (dispatch) => {
   dispatch({
     type: IS_SOLVED,
     payload: solved,
+  });
+};
+export const resetState = (state) => (dispatch) => {
+  dispatch({
+    type: RESET_STATE,
+    payload: state,
   });
 };
