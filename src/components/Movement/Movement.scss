@@ -1,0 +1,30 @@
+@import '../../assets/styles/Global.scss';
+
+.Movement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 90px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid $grey-color;
+  border-radius: 5px;
+}
+
+.Movement__img {
+  width: 80px;
+}
+
+.Movement__btn {
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: $yellow-color;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline-style: none;
+}
+
+.Movement__btn:active {
+  background-color: $green-color;
+}
