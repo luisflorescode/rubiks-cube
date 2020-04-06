@@ -1,16 +1,16 @@
 import React from 'react';
-import './Movements.scss';
+import './MovesPanel.scss';
 
-const Movements = () => (
-  <section className="Movements">
-    <h2 className="Movements__title">Movements</h2>
+const MovesPanel = () => (
+  <section className="MovesPanel">
+    <h2 className="MovesPanel__title">Moves Panel</h2>
     <h3>
-      Number of movements:
+      Number of moves:
       {' '}
       <span className="color--red">2</span>
     </h3>
     <h3>
-      Movement history
+      Moves history
       <br />
       <span className="color--green">
         U&apos; D&apos; L U&apos; D&apos;
@@ -19,4 +19,4 @@ const Movements = () => (
   </section>
 );
 
-export default Movements;
+export default MovesPanel;

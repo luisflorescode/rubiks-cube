@@ -1,6 +1,6 @@
 const random = require('./random');
 
-const movements = [
+const moves = [
   'R',
   "R'",
   'L',
@@ -23,16 +23,16 @@ const movements = [
 
 const randomCube = () => {
   const cont = random(3, 6);
-  const cubeMovements = [];
+  const cubeMoves = [];
 
   for (let i = 0; i < cont; i += 1) {
-    cubeMovements.push(movements[random(0, movements.length - 1)]);
+    cubeMoves.push(moves[random(0, moves.length - 1)]);
   }
 
-  return cubeMovements;
+  return cubeMoves;
 };
 
 module.exports = {
-  movements,
+  moves,
   randomCube,
 };

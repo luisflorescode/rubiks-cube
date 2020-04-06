@@ -2,7 +2,7 @@ const rubik = require('../utils/rubik');
 
 // Initial State
 const initialState = {
-  firstScramble: rubik.randomCube(),
+  initialCube: rubik.randomCube(),
 };
 
 // Actions

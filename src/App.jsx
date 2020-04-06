@@ -1,9 +1,9 @@
 import React from 'react';
 import Cube from './components/Cube';
 import Header from './components/Header';
-import Movements from './components/Movements';
+import MovesPanel from './components/MovesPanel';
 import './App.scss';
-import MovementsList from './components/MovementsList';
+import MovesList from './components/MovesList';
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Header />
       <div className="App__content">
         <Cube />
-        <Movements />
-        <MovementsList />
+        <MovesPanel />
+        <MovesList />
       </div>
     </div>
   );

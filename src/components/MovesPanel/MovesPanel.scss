@@ -1,6 +1,6 @@
 @import '../../assets/styles/Global.scss';
 
-.Movements {
+.MovesPanel {
   width: 300px;
   max-height: 300px;
   overflow: auto;
@@ -10,7 +10,7 @@
   border-radius: 10px;
 }
 
-.Movements__title {
+.MovesPanel__title {
   text-align: center;
   color: $blue-color;
 }

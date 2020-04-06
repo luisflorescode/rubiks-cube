@@ -1,6 +1,6 @@
 @import '../../assets/styles/Global.scss';
 
-.Movement {
+.Move {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,11 +12,11 @@
   border-radius: 5px;
 }
 
-.Movement__img {
+.Move__img {
   width: 80px;
 }
 
-.Movement__btn {
+.Move__btn {
   cursor: pointer;
   margin-top: 5px;
   background-color: $yellow-color;
@@ -25,6 +25,6 @@
   outline-style: none;
 }
 
-.Movement__btn:active {
+.Move__btn:active {
   background-color: $green-color;
 }
