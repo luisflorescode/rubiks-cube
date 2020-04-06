@@ -4,7 +4,7 @@ const rubik = require('../utils/rubik');
 const initialState = {
   initialCube: rubik.randomCube(),
   moves: [],
-  isSolved: false,
+  isSolved: true,
 };
 
 // Actions
@@ -38,7 +38,7 @@ export const addMove = (moves) => (dispatch) => {
 };
 export const isSolved = (solved) => (dispatch) => {
   dispatch({
-    type: ADD_MOVE,
+    type: IS_SOLVED,
     payload: solved,
   });
 };
