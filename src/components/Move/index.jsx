@@ -1,17 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Cube from 'rubiks-cube';
 import PropTypes from 'prop-types';
 import { addMove, isSolved } from '../../redux/cubeDuck';
 import './Move.scss';
 
 const Move = ({
-  move, image, moves, addMoveAction, isSolvedAction,
+  move, image, initialCube, moves, addMoveAction, isSolvedAction,
 }) => {
   const applyMove = () => {
     const newMoves = moves;
     newMoves.push(move);
     addMoveAction(newMoves);
-    isSolvedAction(true);
+    const cube = Cube.scramble(initialCube.concat(newMoves).join(' '));
+    if (cube.isSolved()) {
+      isSolvedAction(true);
+    }
   };
 
   return (
@@ -23,12 +27,14 @@ const Move = ({
 };
 
 const mapStateToProps = (reducers) => ({
+  initialCube: reducers.cube.initialCube,
   moves: reducers.cube.moves,
 });
 
 Move.propTypes = {
   move: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  initialCube: PropTypes.instanceOf(Array).isRequired,
   moves: PropTypes.instanceOf(Array).isRequired,
   addMoveAction: PropTypes.func.isRequired,
   isSolvedAction: PropTypes.func.isRequired,
