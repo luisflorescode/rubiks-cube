@@ -3,6 +3,8 @@ const rubik = require('../utils/rubik');
 // Initial State
 const initialState = {
   initialCube: rubik.randomCube(),
+  moves: [],
+  numberMoves: 0,
 };
 
 // Actions
