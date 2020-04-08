@@ -11,7 +11,6 @@ const MovesPanel = ({ moves, isSolved, resetStateAction }) => {
 
   return (
     <section className="MovesPanel">
-      <h2 className="MovesPanel__title">Moves Panel</h2>
       {isSolved ? (
         <div className="MovesPanel__congrats">
           <h3 className="MovesPanel__congrats__text">
@@ -26,12 +25,12 @@ const MovesPanel = ({ moves, isSolved, resetStateAction }) => {
         </div>
       ) : (
         <>
-          <h3>
+          <h3 className="MovesPanel__movesNumber">
             Number of moves:
             {' '}
             <span className="color--orange">{moves.length}</span>
           </h3>
-          <h3>
+          <h3 className="MovesPanel__movesHistory">
             Moves history
             <br />
             <span className="color--green">
