@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Cube from 'rubiks-cube';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { addMove, isSolved } from '../../redux/cubeDuck';
 import './Move.scss';
 

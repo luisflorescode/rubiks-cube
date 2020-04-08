@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Move from '../Move';
 import './MovesList.scss';
 import R from '../../assets/static/images/R-min.png';
