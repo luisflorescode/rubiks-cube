@@ -6,13 +6,13 @@ import Footer from '../components/Footer';
 const Layout = ({ children }) => (
   <>
     <Header />
-    <>{children}</>
+    {children}
     <Footer />
   </>
 );
 
 Layout.propTypes = {
-  children: PropTypes.instanceOf(Array).isRequired,
+  children: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Layout;
