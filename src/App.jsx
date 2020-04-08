@@ -1,24 +1,27 @@
 import React from 'react';
-import Cube from './components/Cube';
-import Header from './components/Header';
-import MovesPanel from './components/MovesPanel';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.scss';
-import MovesList from './components/MovesList';
-import Footer from './components/Footer';
+import Layout from './Layout';
 import Welcome from './pages/Welcome';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <BrowserRouter>
+      <Switch>
+        <Layout>
+          <Route exact path="/" component={Welcome} />
+        </Layout>
+      </Switch>
+      {/* <Header />
       <Welcome />
       <div className="App__content">
         <Cube />
         <MovesPanel />
         <MovesList />
       </div>
-      <Footer />
-    </div>
+      <Footer /> */}
+    </BrowserRouter>
   );
 }
 
