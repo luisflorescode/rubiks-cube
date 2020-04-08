@@ -1,0 +1,28 @@
+@import '../../assets/styles/Global.scss';
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 75px;
+  font-weight: bold;
+  border-top: 1px solid $grey-color;
+}
+
+.Footer__made {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.logo {
+  margin-left: 5px;
+  text-decoration: none;
+  color: $black-color;
+}
+
+.logo-img {
+  color: #00a9e6;
+}
