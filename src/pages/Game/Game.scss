@@ -1,0 +1,11 @@
+@import '../../assets/styles/Global.scss';
+
+.Game {
+  margin: auto;
+  max-width: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}

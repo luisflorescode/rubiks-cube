@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import Layout from './Layout';
 import Welcome from './pages/Welcome';
+import Game from './pages/Game';
 
 
 function App() {
@@ -10,17 +11,10 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Layout>
+          <Route exact path="/game" component={Game} />
           <Route exact path="/" component={Welcome} />
         </Layout>
       </Switch>
-      {/* <Header />
-      <Welcome />
-      <div className="App__content">
-        <Cube />
-        <MovesPanel />
-        <MovesList />
-      </div>
-      <Footer /> */}
     </BrowserRouter>
   );
 }
