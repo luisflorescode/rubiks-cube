@@ -1,12 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { resetState } from '../../redux/cubeDuck';
+import { resetState, solvedCube } from '../../redux/cubeDuck';
 import './MovesPanel.scss';
 
-const MovesPanel = ({ moves, isSolved, resetStateAction }) => {
+const MovesPanel = ({
+  moves,
+  isSolved,
+  resetStateAction,
+  solvedCubeAction,
+}) => {
   const playAgain = () => {
     resetStateAction();
+  };
+
+  const noMovesCube = () => {
+    solvedCubeAction();
   };
 
   return (
@@ -19,16 +28,36 @@ const MovesPanel = ({ moves, isSolved, resetStateAction }) => {
               🎊
             </span>
           </h3>
-          <button onClick={playAgain} className="MovesPanel__congrats__btn" type="button">
+          <button
+            onClick={playAgain}
+            className="MovesPanel__congrats__btn"
+            type="button"
+          >
             Play again
           </button>
         </div>
       ) : (
         <>
+          <div className="MovesPanel__actions">
+            <button
+              onClick={playAgain}
+              className="MovesPanel__actions__btn"
+              type="button"
+            >
+              New game
+            </button>
+            <button
+              onClick={noMovesCube}
+              className="MovesPanel__actions__btn"
+              type="button"
+            >
+              No moves cube
+            </button>
+          </div>
           <h3 className="MovesPanel__movesNumber">
             Number of moves:
             {' '}
-            <span className="color--orange">{moves.length}</span>
+            <span className="color--red">{moves.length}</span>
           </h3>
           <h3 className="MovesPanel__movesHistory">
             Moves history
@@ -52,8 +81,10 @@ MovesPanel.propTypes = {
   moves: PropTypes.instanceOf(Array).isRequired,
   isSolved: PropTypes.bool.isRequired,
   resetStateAction: PropTypes.func.isRequired,
+  solvedCubeAction: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, {
   resetStateAction: resetState,
+  solvedCubeAction: solvedCube,
 })(MovesPanel);
