@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
-import { ReactComponent as RubikSVG } from '../../assets/static/svg/rubik.svg';
+import { ReactComponent as LogoSVG } from '../../assets/static/svg/rubik.svg';
 
 const Header = () => (
   <header>
     <Link className="Header" to="/">
-      <RubikSVG className="Header__logo" />
+      <LogoSVG className="Header__logo" />
       <h1 className="Header__title">
         <span className="color--green">R</span>
         <span className="color--white">u</span>
