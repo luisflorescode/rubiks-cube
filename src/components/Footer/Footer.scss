@@ -18,11 +18,15 @@
 }
 
 .logo {
+  padding: 0 7.9px;
   margin-left: 5px;
   text-decoration: none;
-  color: $black-color;
+  font-family: $me-font;
+  color: $white-color;
+  background-color: $black-color;
+  border-radius: 5px;
 }
 
 .logo-img {
-  color: #00a9e6;
+  color: $me-color;
 }
