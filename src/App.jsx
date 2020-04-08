@@ -3,15 +3,17 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Welcome from './pages/Welcome';
 import Game from './pages/Game';
+import NotFound from './pages/NotFound';
 
 const App = () => (
   <BrowserRouter>
-    <Switch>
-      <Layout>
-        <Route exact path="/game" component={Game} />
+    <Layout>
+      <Switch>
         <Route exact path="/" component={Welcome} />
-      </Layout>
-    </Switch>
+        <Route exact path="/game" component={Game} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </Layout>
   </BrowserRouter>
 );
 
