@@ -1,10 +1,10 @@
 import React from 'react';
 import './Header.scss';
-import logo from '../../assets/static/images/logo.png';
+import { ReactComponent as RubikSVG } from '../../assets/static/svg/rubik.svg';
 
 const Header = () => (
   <header className="Header">
-    <img className="Header__logo" src={logo} alt="Logo" />
+    <RubikSVG className="Header__logo" />
     <h1 className="Header__title">
       <span className="color--green">R</span>
       <span className="color--white">u</span>
